@@ -46,7 +46,7 @@ function start() {
                         }
                         return userChoices;
                     },
-                    message: "Which product would you like to b"
+                    message: "Which product would you like to buy?"
                 },
                 {
                     name: "quantity",
@@ -73,7 +73,8 @@ function start() {
                         "UPDATE products SET ? WHERE ?",
                         [
                             {
-                                stock_quantity: chosenItem.stock_quantity - parseInt(answer.quantity)
+                                stock_quantity: chosenItem.stock_quantity - parseInt(answer.quantity),
+                                product_sales: chosenItem.product_sales + (parseInt(answer.quantity) * chosenItem.price)
                             },
                             {
                                 item_id: chosenItem.item_id
@@ -84,8 +85,7 @@ function start() {
                             // console.log("inventory updated!");
                             // console.log(chosenItem);
                             // show the customer the total cost of the purchase
-                            console.log(`Thanks for your business!` + "\n" + "The total for your purchase is: US$" + parseInt(answer.quantity) * chosenItem.price);
-
+                            console.log(`\nThanks for your business!` + "\n" + "The total for your purchase is: US$" + parseInt(answer.quantity) * chosenItem.price);
                         }
                     );
                 }
