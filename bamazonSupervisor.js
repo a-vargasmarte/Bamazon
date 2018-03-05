@@ -50,16 +50,20 @@ function promptSupervisor() {
         // console.table(answer);
         switch (answer.supervisorOptions) {
             case 'View Product Sales by Department':
-                cnn.query("SELECT departments.department_id, departments.department_name, departments.over_head_costs, SUM(products.product_sales) AS Total_Sales FROM departments INNER JOIN products ON departments.department_name=products.department_name GROUP BY departments.department_name", function (err, res) {
+                cnn.query("SELECT departments.department_id AS ID, departments.department_name as Department, departments.over_head_costs as Overhead, SUM(products.product_sales) AS Total_Sales FROM departments INNER JOIN products ON departments.department_name=products.department_name GROUP BY departments.department_name", function (err, res) {
                     if (err) throw err;
                     // console.log(res);
                     // we add a new property to each of our res objects to calculate total_profit by department
                     res.forEach(row => {
                         // calculate profit
-                        row.total_profit = row.Total_Sales - row.over_head_costs;
+                        row.total_profit = row.Total_Sales - row.Overhead;
                     });
+                    console.log('\n\n-----------------------------------------------------');
+                    console.log('Overhead costs, total sales, and profit by department');
+                    console.log('-----------------------------------------------------\n');
                     console.table(res);
                 });
+
             case 'Create New Department':
                 // inquirer.prompt(
                 //     {

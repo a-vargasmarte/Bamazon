@@ -72,15 +72,17 @@ Bamazon is an Amazon-like storefront. Bamazon takes orders from customers and de
   1. `View Product Sales by Department`
   2. `Create New Department`
 
-  Image here
+  ![running supervisor view 1](supervisor-1.gif)
 
   `View Product Sales by Department` displays a summarized table in your termina/bash window with the department id, department name, overhead costs, product sales, and total profit for each of the department categories of the storefront.
 
-  Image here
+  ![running supervisor view 2](supervisor-2.gif)
 
   `Create New Department` allows supervisors to add a new department of their liking. It then displays a new updated table of current department ids, names, and overhead costs.
 
-  Image here
+  ![running supervisor view 3](supervisor-3.gif)
+
+  [Top](#intro)
 
   
 
