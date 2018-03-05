@@ -30,17 +30,13 @@ Bamazon is an Amazon-like storefront. Bamazon takes orders from customers and de
 
   ![running customer view](customer-1.gif)
 
-  You will then be prompted for the quantity to buy for the chosen product.
+  You will then be prompted for the quantity to buy for the chosen product. Once you choose how much you want to buy, this app checks if there is enough of the product in the inventory. If so, then you will get a total cost for the purchase, and the inventory is updated so as to reflect any previous transactions.
 
-  A second image will be displayed here
-
-  Once you choose how much you want to buy, this app checks if there is enough of the product in the inventory. If so, then you will get a total cost for the purchase, and the inventory is updated so as to reflect any previous transactions.
-
-  A third image will be displayed here
+  ![running customer view 2](customer-2.gif)
 
   If the quantity entered is greater than the stock in the inventory, then you won't be able to place an order!
 
-  A fourth image is here
+  ![running customer view 3](customer-3.gif)
 
   ### Manager View
 
