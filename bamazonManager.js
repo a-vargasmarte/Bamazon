@@ -121,9 +121,17 @@ function promptManager() {
                                     if (error) throw error;
                                     console.log('\nSuccesfully added ' + answer.quantity + ' ' + chosenItem.product_name + '\n');
                                     console.log('\nCurrent product information for ' + chosenItem.product_name + '\n');
-                                    console.table(chosenItem);
+                                    // console.table(chosenItem);
+
                                 }
                             )
+                            // console.log(chosenItem);
+                            cnn.query(
+                                "SELECT " + "'" + chosenItem + "'" + " FROM products", function (err, res) {
+                                    if (err) throw err;
+                                    console.table(chosenItem);
+                                }
+                            );
                         });
                 });
                 break;
@@ -217,5 +225,15 @@ function insertQuery() {
         console.log(`\nSuccesfully added ${quantityQuery} ${nameQuery} to inventory!\n`);
         console.log("----------------------");
         // console.table(res);
+        updatedTable();
     });
+}
+
+function updatedTable() {
+    let query = "SELECT * FROM products";
+    cnn.query(query, function (err, res) {
+        if (err) throw err;
+        console.table(res);
+    });
+
 }

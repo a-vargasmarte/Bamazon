@@ -51,19 +51,19 @@ Bamazon is an Amazon-like storefront. Bamazon takes orders from customers and de
 
   `View Products for Sale` lists every available item: the item IDs, names, item department, prices, stock quantities, and sales per product.
 
-  Image here
+  ![running manager view 1](manager-1.gif)
 
   `View Low Inventory` lists all items with an inventory count lower than five.
 
-  Image here
+  ![running manager view 2](manager-2.gif)
 
   `Add to Inventory` prompts the manager to choose a store item to "add more" to. It follows by giving managers an updated table for the product added to.
 
-  Image here
+  ![running manager view 3](manager-3.gif)
 
   `Add New Product` allows the manager to add a completely new product to the store.
 
-  Image here
+  ![running manager view 4](manager-4.gif)
 
   ### Supervisor View
 
